@@ -2,7 +2,7 @@ import api from "../api";
 
 // Register new user
 export const register = (username, email, password) =>
-  api.post("users/register/", { username, email, password });
+  api.post("users/register/", { "username":username, "email":email, "password":password });
 
 // Login existing user
 export const login = (username, password) =>

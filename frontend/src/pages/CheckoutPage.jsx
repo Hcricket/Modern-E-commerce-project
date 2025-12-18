@@ -1,9 +1,9 @@
 import React from "react";
-import { createCheckoutSession } from "../services/stripe";
+import { createPaymentIntent } from "../services/stripe";
 
 function CheckoutPage() {
   const handleCheckout = async () => {
-    const res = await createCheckoutSession();
+    const res = await createPaymentIntent();
     window.location.href = res.data.url;
   };
 
