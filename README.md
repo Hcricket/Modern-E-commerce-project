@@ -66,7 +66,7 @@ Review
 Wishlist
 API’s
 Stripe API for credit card processing & payments
-Another API
+OPEN API
 Authentication
 Use Django’s built in authentication for a user to create an account.
 
@@ -79,3 +79,126 @@ Login Required Decorators
 Password Management
 Session Configuration
 Shopping Cart
+
+
+User → Profile (One-to-One)
+
+User → Addresses (One-to-Many)
+
+User → Cart (One-to-One)
+
+User → Wishlist (One-to-One)
+
+User → Orders (One-to-Many)
+
+User → Reviews (One-to-Many)
+
+Product → Category (Many-to-One)
+
+Product → Brand (Many-to-One)
+
+Cart → Cart Items → Product (Chain relationship)
+
+Order → Order Items → Product (Chain relationship)
+
+
+python -m Ecommerce venv
+source Ecommerce/bin/activate
+
+pip install django framework
+
+create db
+
+django-admin startproject ecom_proj
+cd ecom_proj
+
+python manage.py startapp user_app
+python manage.py startapp product_app
+python manage.py startapp cart_app
+python manage.py startapp order_app
+python manage.py startapp review_app
+python manage.py startapp wishlist_app
+
+
+
+INSTALLED_APPS = [
+    
+    'rest_framework',
+    'user_app',
+    'product_app',
+    'cart_app',
+    'order_app',
+    'review_app',
+    'wishlist_app',
+]
+
+AUTH_USER_MODEL = 'user_app.User'
+
+create dummy data
+ user_app/fixtures/users.json
+ product_app/fixtures/categories.json
+ product_app/fixtures/products.json
+ cart_app/fixtures/carts.json
+ order_app/fixtures/orders.json
+ review_app/fixtures/reviews.json
+ wishlist_app/fixtures/wishlists.json
+
+Models(class)
+-User
+-ItemCategory,Product
+-Cart,CartItem,Meta
+-Order,OrderItem
+-Review
+-Wishlist,WishlistItem,Meta(python manage.py makemigrations/migrate)
+
+#Superuser
+python manage.py createsuperuser
+
+<!-- dummy data -->
+model → app name + model name
+
+pk → primary key
+
+fields → field values
+
+
+
+'''Defined models (User, Product, Cart, Order, Wishlist, etc.)
+
+Created fixtures (.json files)
+
+Tested relationships in the Django shell'''
+
+
+user_app
+-JWT JSON-Web-Token(authentication library)
+pip install djangorestframework-simplejwt
+put/settings.py->REST_FRAMEWORK
+serializer/view/urls
+
+
+User first → authentication baseline.
+
+Cart second → core shopping functionality.
+
+Product third → catalog to fill cart.
+
+Order fourth → checkout flow.
+
+Review fifth → feedback system.
+
+Wishlist last → optional but nice‑to‑have feature.
+
+
+
+Model → defines data.
+
+Serializer → translates data.
+
+View → handles API logic.
+
+URL → exposes endpoint to client.
+
+<!-- Model → Serializer → View → URL → Client -->
+
+

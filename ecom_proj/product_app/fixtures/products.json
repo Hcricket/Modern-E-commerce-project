@@ -1,0 +1,77 @@
+[
+  {
+    "model": "product_app.product",
+    "pk": 1,
+    "fields": {
+      "name": "Classic White T-Shirt",
+      "description": "Soft cotton T-shirt perfect for everyday wear.",
+      "price": "19.99",
+      "brand": "BasicWear",
+      "color": "White",
+      "size": "M",
+      "image_url": "https://example.com/images/tshirt_white.jpg",
+      "stock": 50,
+      "category": 1
+    }
+  },
+  {
+    "model": "product_app.product",
+    "pk": 2,
+    "fields": {
+      "name": "Slim Fit Jeans",
+      "description": "Denim jeans with a modern slim fit cut.",
+      "price": "49.99",
+      "brand": "DenimCo",
+      "color": "Blue",
+      "size": "32",
+      "image_url": "https://example.com/images/jeans_blue.jpg",
+      "stock": 30,
+      "category": 1
+    }
+  },
+  {
+    "model": "product_app.product",
+    "pk": 3,
+    "fields": {
+      "name": "Summer Dress",
+      "description": "Lightweight floral dress for warm weather.",
+      "price": "39.99",
+      "brand": "FashionLine",
+      "color": "Red",
+      "size": "S",
+      "image_url": "https://example.com/images/dress_red.jpg",
+      "stock": 20,
+      "category": 2
+    }
+  },
+  {
+    "model": "product_app.product",
+    "pk": 4,
+    "fields": {
+      "name": "Leather Handbag",
+      "description": "Stylish handbag made from genuine leather.",
+      "price": "89.99",
+      "brand": "LuxStyle",
+      "color": "Brown",
+      "size": "One Size",
+      "image_url": "https://example.com/images/handbag_brown.jpg",
+      "stock": 15,
+      "category": 2
+    }
+  },
+  {
+    "model": "product_app.product",
+    "pk": 5,
+    "fields": {
+      "name": "Smart Watch",
+      "description": "Feature-rich smartwatch with fitness tracking.",
+      "price": "199.99",
+      "brand": "TechGear",
+      "color": "Black",
+      "size": "Standard",
+      "image_url": "https://example.com/images/smartwatch_black.jpg",
+      "stock": 25,
+      "category": 3
+    }
+  }
+]

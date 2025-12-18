@@ -1,0 +1,17 @@
+
+
+
+:root {
+  --bg: gold;   /* background color variable */
+  --text: #212529; /* text color variable */
+}
+
+body {
+  margin: 0;
+  background: var(--bg); /* applies background color */
+  color: var(--text);    /* applies text color */
+}
+
+.container {
+  max-width: 960px; /* limits content width */
+}

@@ -1,0 +1,31 @@
+[
+  {
+    "model": "product_app.itemcategory",
+    "pk": 1,
+    "fields": {
+      "name": "Men"
+    }
+  },
+  {
+    "model": "product_app.itemcategory",
+    "pk": 2,
+    "fields": {
+      "name": "Women"
+    }
+  },
+  {
+    "model": "product_app.itemcategory",
+    "pk": 3,
+    "fields": {
+      "name": "Accessories"
+    }
+  },
+  {
+    "model": "product_app.itemcategory",
+    "pk": 4,
+    "fields": {
+      "name": "Electronics"
+    }
+  }
+]
+

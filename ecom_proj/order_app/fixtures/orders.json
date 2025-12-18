@@ -1,0 +1,55 @@
+[
+  {
+    "model": "order_app.orderitem",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "product": 1,
+      "quantity": 2,
+      "price": "799.89"
+    }
+  },
+  {
+    "model": "order_app.orderitem",
+    "pk": 2,
+    "fields": {
+      "order": 1,
+      "product": 2,
+      "quantity": 1,
+      "price": "20.79"
+    }
+  },
+  {
+    "model": "order_app.orderitem",
+    "pk": 3,
+    "fields": {
+      "order": 2,
+      "product": 3,
+      "quantity": 1,
+      "price": "49.99"
+    }
+  }
+]
+
+[
+  {
+    "model": "order_app.orderitem",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "product": 1,
+      "quantity": 2,
+      "price": "799.89"
+    }
+  },
+  {
+    "model": "order_app.orderitem",
+    "pk": 2,
+    "fields": {
+      "order": 1,
+      "product": 2,
+      "quantity": 1,
+      "price": "20.79"
+    }
+  }
+]
