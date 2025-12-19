@@ -1,4 +1,4 @@
 import api from "../api";
 
 export const createPaymentIntent = (orderId) =>
-  api.post("payments/", { order_id: orderId });
+  api.post("payment/", { order_id: orderId });

@@ -186,3 +186,33 @@ src/
     HomePage.jsx
   components/
     Navbar.jsx
+
+
+
+
+1. HomePage → ProductPage
+User browses products.
+
+2. ProductPage → ProductDetailPage
+User clicks a product.
+
+3. ProductDetailPage
+User can:
+
+Add to Cart
+
+Buy Now (Stripe Checkout)
+
+4. CartPage
+User sees all cart items.
+
+5. CheckoutPage
+User pays for the whole cart.
+
+6. Stripe → Django Webhook
+Order is created automatically.
+
+7. OrderPage
+User sees their orders.
+
+This is a complete e‑commerce system.
