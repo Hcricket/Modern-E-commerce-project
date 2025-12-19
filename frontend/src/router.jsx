@@ -8,6 +8,7 @@ import ProfilePage from "./pages/ProfilePage";
 import CartPage from "./pages/CartPage";
 import OrderPage from "./pages/OrderPage";
 import ProductPage from "./pages/ProductPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import WeatherPage from "./pages/WeatherPage";
 
@@ -23,8 +24,10 @@ const router = createBrowserRouter([
       { path: "cart", element: <CartPage /> },
       { path: "orders", element: <OrderPage /> },
       { path: "products", element: <ProductPage /> },
+      { path: "products/:id",element: <ProductDetailPage/>},//link to products by id
       { path: "checkout", element: <CheckoutPage /> },
       { path: "weather", element: <WeatherPage /> },
+      
     ],
   },
 ]);

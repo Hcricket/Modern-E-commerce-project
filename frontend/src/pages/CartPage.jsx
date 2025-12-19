@@ -16,7 +16,7 @@ function CartPage() {
     <div className="p-3">
       <h2>Cart</h2>
       <pre>{JSON.stringify(cart, null, 2)}</pre>
-      <button onClick={() => addCartItem(1)}>Add Product #1</button>
+      {/* <button onClick={() => addCartItem(1)}>Add Product #1</button> */}
     </div>
   );
 }
