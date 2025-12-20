@@ -23,8 +23,8 @@ class AddToCart(APIView):
   def post(self,request):
     #POST/api/cart/add-product to cart
     cart,created = Cart.objects.get_or_create(user=request.user,is_active=True)
-    product_id = request.data.get("product")
-    quantity = int(request.data.get("quantity",1))
+    product_id = request.data.get("product_id")
+    # quantity = int(request.data.get("quantity",1))
 
     try:
       product = Product.objects.get(id=product_id)
@@ -35,7 +35,7 @@ class AddToCart(APIView):
     cart_item, created = CartItem.objects.get_or_create(
     cart=cart,
     product=product,
-    defaults={'quantity': quantity}
+    defaults={'quantity': 1}
 )
 
     if not created:

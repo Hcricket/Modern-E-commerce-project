@@ -1,71 +1,47 @@
-// import React from "react";
-// import { createPaymentIntent } from "../services/stripe";
-
-// function CheckoutPage() {
-//   const handleCheckout = async () => {
-//     const res = await createPaymentIntent();
-//     window.location.href = res.data.url;
-//   };
-
-//   return (
-//     <div className="p-3">
-//       <h2>Checkout</h2>
-//       <button onClick={handleCheckout}>Pay with Stripe</button>
-//     </div>
-//   );
-// }
-
-// export default CheckoutPage;
-import React from "react";
-import { createPaymentIntent } from "../services/stripe";
-
-function CheckoutPage() {
-  const handleCheckout = async () => {
-    const res = await createPaymentIntent();
-    window.location.href = res.data.url;
-  };
-
+import { useState } from "react";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements, CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import api from "../api";
+const stripePromise = loadStripe("pk_test_51SfD0jPWV9kaCOUf9sXtJZB5hyptUfrhLT2jQDsrYcAlxjJh0FOClgEofcjQpy2jp8xVteYToEtNCaSlD5pkRObh00XNmaC3fy");
+const CheckoutPage = () => {
   return (
-    <div
-      className="min-vh-100 d-flex justify-content-center align-items-center"
-      style={{ backgroundColor: "#f8fdf8" }} // soft white-green background
-    >
-      <div
-        className="p-4 shadow rounded"
-        style={{
-          width: "350px",
-          backgroundColor: "#ffffff",
-          border: "1px solid #d9f2d9",
-        }}
-      >
-        <h2
-          className="text-center mb-4"
-          style={{ color: "#2e7d32", fontWeight: "600" }}
-        >
-          Checkout
-        </h2>
-
-        <button
-          onClick={handleCheckout}
-          className="w-100 py-2"
-          style={{
-            backgroundColor: "#2e7d32",
-            color: "white",
-            border: "none",
-            borderRadius: "6px",
-            fontSize: "16px",
-            fontWeight: "500",
-            cursor: "pointer",
-            transition: "0.2s",
-          }}
-          onMouseOver={(e) => (e.target.style.backgroundColor = "#256628")}
-          onMouseOut={(e) => (e.target.style.backgroundColor = "#2e7d32")}
-        >
-          Pay with Stripe
-        </button>
-      </div>
-    </div>
+    <Elements stripe={stripePromise}>
+      <Checkout />
+    </Elements>
   );
-}
-
+};
+const Checkout = () => {
+  const stripe = useStripe();
+  const elements = useElements();
+  const [loading, setLoading] = useState(false);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    // Request client secret from backend
+    const res = await api.post("payment/");
+    const clientSecret = res.data.client_secret;
+    // Confirm payment
+    const result = await stripe.confirmCardPayment(clientSecret, {
+      payment_method: {
+        card: elements.getElement(CardElement),
+      },
+    });
+    if (result.error) {
+      alert(result.error.message);
+    } else if (result.paymentIntent.status === "succeeded") {
+      alert("Payment succeeded!");
+      // Optional: clear cart or redirect
+    }
+    setLoading(false);
+  };
+  return (
+    <form onSubmit={handleSubmit}>
+      <h2>Checkout</h2>
+      <CardElement />
+      <button type="submit" disabled={!stripe || loading}>
+        {loading ? "Processing..." : "Pay"}
+      </button>
+    </form>
+  );
+};
 export default CheckoutPage;

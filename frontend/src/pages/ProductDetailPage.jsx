@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProductDetail } from '../services/product';
-
+import { addCartItem } from '../services/cart';
 function ProductDetailPage() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
@@ -25,6 +25,7 @@ function ProductDetailPage() {
       />
       <p>{product.description}</p>
       <p style={{ fontWeight: 'bold', color: 'green' }}>${product.price}</p>
+       <button onClick={() => addCartItem(id)}>Add Product </button>
     </div>
   );
 }

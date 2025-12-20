@@ -151,5 +151,6 @@ from dotenv import load_dotenv
 load_dotenv()  # take environment variables from .env
 
 STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY")
+# STRIPE_PUBLISHABLE_KEY = pk_test_51SfD0jPWV9kaCOUf9sXtJZB5hyptUfrhLT2jQDsrYcAlxjJh0FOClgEofcjQpy2jp8xVteYToEtNCaSlD5pkRObh00XNmaC3fy
 WEATHER_API_KEY = os.getenv("WEATHER_API_KEY")
 

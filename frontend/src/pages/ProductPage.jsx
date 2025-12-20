@@ -65,7 +65,6 @@ function ProductPage() {
             </div>
           </Link>
         ))}
-        <button onClick={() => addCartItem(id)}>Add Product </button>
       </div>
     </div>
   );
