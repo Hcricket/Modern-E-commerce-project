@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getCartItems, addCartItem } from "../services/cart";
+import CheckoutPage from "./CheckoutPage";
 
 function CartPage() {
   const [cart, setCart] = useState([]);
@@ -16,7 +17,7 @@ function CartPage() {
     <div className="p-3">
       <h2>Cart</h2>
       <pre>{JSON.stringify(cart, null, 2)}</pre>
-      {/* <button onClick={() => addCartItem(1)}>Add Product #1</button> */}
+      <CheckoutPage/>
     </div>
   );
 }
