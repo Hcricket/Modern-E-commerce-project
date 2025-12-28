@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getProducts } from "../services/product";
 import { addCartItem } from "../services/cart";
-// import photo  from "../assets/images/col1.jpeg";
 import CartPage from "./CartPage";
+
 function ProductPage() {
   const [products, setProducts] = useState([]);
 
@@ -44,8 +44,9 @@ function ProductPage() {
               }}
             >
               <img
-                src={product.image_url || photo}
+                src={product.image_url}
                 alt={product.name}
+                onError={() => console.log("Image failed:", product.image_url)}
                 style={{
                   width: "100%",
                   height: "160px",

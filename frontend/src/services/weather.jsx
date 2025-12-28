@@ -6,4 +6,4 @@
 import api from "../api";
 
 export const getWeather = (city) =>
-  api.post("weather/", { city });
+  api.post("/weather/", { city });

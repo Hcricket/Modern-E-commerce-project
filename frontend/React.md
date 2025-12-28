@@ -216,3 +216,50 @@ Order is created automatically.
 User sees their orders.
 
 This is a complete e‑commerce system.
+
+
+
+src
+├── api.jsx
+├── App.css
+├── App.jsx
+├── assets
+│   ├── images
+│   │   ├── budgeting.jpg
+│   │   ├── col1.jpeg
+│   │   ├── col2.jpeg
+│   │   ├── col3.jpeg
+│   │   ├── collections.jpg
+│   │   ├── jeans.jpg
+│   │   ├── leather.jpg
+│   │   ├── logo.jpg
+│   │   ├── right.jpg
+│   │   ├── shirt.jpg
+│   │   ├── smart.jpg
+│   │   └── summer.jpg
+│   └── react.svg
+├── components
+│   └── Navbar.jsx
+├── index.css
+├── main.jsx
+├── pages
+│   ├── CartPage.jsx
+│   ├── CheckoutPage.jsx
+│   ├── HomePage.jsx
+│   ├── LoginPage.jsx
+│   ├── OrderPage.jsx
+│   ├── ProductDetailPage.jsx
+│   ├── ProductImages.jsx
+│   ├── ProductPage.jsx
+│   ├── ProfilePage.jsx
+│   ├── RegisterPage.jsx
+│   └── WeatherPage.jsx
+├── router.jsx
+└── services
+    ├── auth.jsx
+    ├── cart.jsx
+    ├── orders.jsx
+    ├── product.jsx
+    ├── stripe.jsx
+    └── weather.jsx
+

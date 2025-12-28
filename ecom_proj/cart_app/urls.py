@@ -9,3 +9,34 @@ urlpatterns = [
 
 
 # The URLconf maps a URL path to that view.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# from django.urls import path
+# from .views import ViewCart, AddToCart, RemoveFromCart
+
+# urlpatterns = [
+#     path("cart/", ViewCart.as_view()),
+#     path("cart/add/", AddToCart.as_view()),
+#     path("cart/remove/<int:product_id>/", RemoveFromCart.as_view()),
+# ]

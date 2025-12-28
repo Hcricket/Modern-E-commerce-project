@@ -164,3 +164,80 @@ PUT /api/v1/orders/<id>/ → update full order (e.g., shipping address)
 PATCH /api/v1/orders/<id>/ → update partial order (e.g., status only)
 
 DELETE /api/v1/orders/<id>/ → cancel/delete order
+
+
+
+backend
+├── manage.py
+├── requirement.txt
+├── ecom_proj
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+│
+├── cart_app
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── fixtures
+│   │   ├── cartitems.json
+│   │   └── carts.json
+│   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   ├── 0002_rename_updated_at_cart_created_at.py
+│   │   └── 0003_alter_cartitem_cart.py
+│   ├── models.py
+│   ├── serializers.py
+│   ├── urls.py
+│   └── views.py
+│
+├── order_app
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── fixtures
+│   │   ├── orderitems.json
+│   │   └── orders.json
+│   ├── migrations
+│   │   └── 0001_initial.py
+│   ├── models.py
+│   ├── serializers.py
+│   ├── urls.py
+│   └── views.py
+│
+├── payment_app
+│   ├── urls.py
+│   └── views.py
+│
+├── product_app
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── fixtures
+│   │   └── products.json
+│   ├── migrations
+│   │   └── 0001_initial.py
+│   ├── models.py
+│   ├── serializers.py
+│   ├── urls.py
+│   └── views.py
+│
+├── user_app
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── fixtures
+│   │   ├── categories.json
+│   │   └── users.json
+│   ├── migrations
+│   │   └── 0001_initial.py
+│   ├── models.py
+│   ├── serializers.py
+│   ├── urls.py
+│   └── views.py
+│
+└── weather_app
+    ├── urls.py
+    └── views.py

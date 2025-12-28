@@ -9,7 +9,7 @@
       "brand": "BasicWear",
       "color": "White",
       "size": "M",
-      "image_url": "https://www.freepik.com/free-vector/white-realistic-t-shirt-isolated-front-back_39025616.htm#fromView=keyword&page=1&position=4&uuid=1c49f822-e6f6-43c1-88ff-d16c8ec759ea&query=White+t+shirt+template",
+      "image_url": "https://images.pexels.com/photos/10278973/pexels-photo-10278973.jpeg",
       "stock": 50,
       "category": 1
     }
@@ -24,7 +24,7 @@
       "brand": "DenimCo",
       "color": "Blue",
       "size": "32",
-      "image_url": "https://example.com/images/jeans_blue.jpg",
+      "image_url": "https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg",
       "stock": 30,
       "category": 1
     }
@@ -39,7 +39,7 @@
       "brand": "FashionLine",
       "color": "Red",
       "size": "S",
-      "image_url": "https://example.com/images/dress_red.jpg",
+      "image_url": "https://images.pexels.com/photos/2983461/pexels-photo-2983461.jpeg",
       "stock": 20,
       "category": 2
     }
@@ -54,7 +54,7 @@
       "brand": "LuxStyle",
       "color": "Brown",
       "size": "One Size",
-      "image_url": "https://example.com/images/handbag_brown.jpg",
+      "image_url": "https://images.pexels.com/photos/322207/pexels-photo-322207.jpeg",
       "stock": 15,
       "category": 2
     }
@@ -69,9 +69,134 @@
       "brand": "TechGear",
       "color": "Black",
       "size": "Standard",
-      "image_url": "https://example.com/images/smartwatch_black.jpg",
+      "image_url": "https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg",
       "stock": 25,
+      "category": 3
+    }
+  },
+  {
+    "model": "product_app.product",
+    "pk": 6,
+    "fields": {
+      "name": "Running Shoes",
+      "description": "Lightweight running shoes designed for comfort and speed.",
+      "price": "79.99",
+      "brand": "RunPro",
+      "color": "Gray",
+      "size": "10",
+      "image_url": "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
+      "stock": 40,
+      "category": 3
+    }
+  },
+  {
+    "model": "product_app.product",
+    "pk": 7,
+    "fields": {
+      "name": "Hooded Sweatshirt",
+      "description": "Warm and cozy hoodie for casual wear.",
+      "price": "34.99",
+      "brand": "CozyWear",
+      "color": "Black",
+      "size": "L",
+      "image_url": "https://images.pexels.com/photos/6311391/pexels-photo-6311391.jpeg",
+      "stock": 35,
+      "category": 1
+    }
+  },
+  {
+    "model": "product_app.product",
+    "pk": 8,
+    "fields": {
+      "name": "Wireless Headphones",
+      "description": "Noise-cancelling wireless headphones with long battery life.",
+      "price": "129.99",
+      "brand": "SoundMax",
+      "color": "White",
+      "size": "Standard",
+      "image_url": "https://images.pexels.com/photos/3394659/pexels-photo-3394659.jpeg",
+      "stock": 22,
+      "category": 3
+    }
+  },
+  {
+    "model": "product_app.product",
+    "pk": 9,
+    "fields": {
+      "name": "Casual Sneakers",
+      "description": "Comfortable sneakers suitable for daily wear.",
+      "price": "59.99",
+      "brand": "UrbanStep",
+      "color": "White",
+      "size": "9",
+      "image_url": "https://images.pexels.com/photos/2529147/pexels-photo-2529147.jpeg",
+      "stock": 28,
+      "category": 3
+    }
+  },
+  {
+    "model": "product_app.product",
+    "pk": 10,
+    "fields": {
+      "name": "Elegant Wristwatch",
+      "description": "Luxury wristwatch with stainless steel strap.",
+      "price": "249.99",
+      "brand": "TimeLux",
+      "color": "Silver",
+      "size": "Standard",
+      "image_url": "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg",
+      "stock": 12,
       "category": 3
     }
   }
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
